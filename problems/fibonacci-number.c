@@ -1,18 +1,18 @@
 #include "stdio.h"
 
 int count(int n, int *memory){
-    if(n <= 1) return 1;
+    if(n == 1) return 1;
+    if(n <= 0) return 0;
     if(memory[n] > 0) return memory[n];
     return memory[n] = count(n - 1, memory) + count(n - 2, memory);
 }
-
-int climbStairs(int n){
-    int memory[46] = {0};
+int fib(int n){
+    int memory[31] = {0};
     return count(n, memory);
 }
 
 
 int main(){
-    printf("Ansert %d\n", climbStairs(2));
+    printf("%d",fib(2));
     return 0;
 }
