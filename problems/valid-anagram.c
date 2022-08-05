@@ -12,10 +12,3 @@ bool isAnagram(char* s, char* t) {
         if (hash[i] != 0) return false;
     return true;
 }
-
-int main() {
-    char s[] = "abinash";
-    char t[] = "bianahs";
-    printf("%d ", isAnagram(s, t));
-    return 0;
-}
